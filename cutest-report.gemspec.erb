@@ -1,0 +1,17 @@
+<% require "./lib/cutest-report" -%>
+Gem::Specification.new do |s|
+  s.name              = "cutest-report"
+  s.version           = "<%= CutestReport::VERSION %>"
+  s.summary           = "Beautiful reports for Cutest."
+  s.authors           = ["Ariel H. Pillet"]
+  s.email             = ["apillet@gmail.com"]
+  s.homepage          = "http://github.com/apillet/cutest-report"
+  s.files = <%= Dir[
+    "README.markdown",
+    "Rakefile",
+    "lib/**/*.rb",
+    "*.gemspec",
+    "test/**/*.rb"
+  ].inspect %>
+  s.add_dependency "cutest", ">= 1.0.0"
+end
